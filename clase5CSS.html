@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<style>
+		body {
+			height: 400em;
+		}
+		div {
+			width: 150px;
+			height: 150px;
+			background-color: #142850;
+			border: 2px solid #50BDA1;
+		}
+		.padre {
+			/* el "static" no me sirve para las coordenadas, ni lo terabaja. Siempre lo tenemos por defect, de manera predeterminada*/
+			position: relative;
+			top: 200px; /*yo aca le estoy dando una altura de 200px */
+		}
+		.rebelde {
+			/*position: absolute; no tiene en cuenta el espacio de la caja, es invisible para el, se puede sobreponer tambien. Para que esto no ocurra si o si necesita de un "padre", en este caso toma al BODY como "padre" porque es lo mas cercano que encuentra */  
+			/*position: relative; se toma en cuenta dentro del documento html, es decir que va dejando el espacio de la caja*/
+			position: absolute;/* se va a mover siempre en relacion al margen que tenga el padre*/
+			left: 50px;
+			top: 50px;
+			/*position: fixed; el `NO va a depender de un padre, su padre siempre va a ser BODY. No ocupa espacio en el documento*/
+
+		}
+		.flotante {
+			background-color: crimson;
+			position: fixed; /*se utiliza mucho*/
+			top: 50px;
+		}
+		.uno {
+			position: relative;
+			top: 100px;
+			background-color: darkgreen;
+			z-index: 20; /* con el z-index se suelen utilizar numeros altos, ej. 9999 (para asegurarse que eso este primero). El de mayor Z-INDEX es el que se va a 
+			posicionar adelante*/
+		}
+		.dos {
+			position: relative;
+			left: 50px;
+			z-index: 10;
+		}
+	</style>
+</head>
+<body>
+	<div class="padre">
+	<div class="rebelde"></div>
+	</div> 
+	<div class="flotante"></div>
+	<div class="uno"></div>
+	<div class="dos"></div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 "> /*este es el que usa la profe*/
+	<title></title>
+	<style>{
+		margin: 0; 
+		box-sizing: border-box;
+	}
+
+	body{
+		font-family: Helvetica, Arial;
+	}
+
+	h1{
+		text-align: center;
+	}
+
+	nav{
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 10px;
+	}
+
+	a{
+		text-decoration: none;
+		font-size: 1.5em;
+		background-color: grey;
+		margin: 10px;
+		padding: 10px;
+		color: black;
+		border-radius: 1em;
+	}
+
+	a:hover{
+		background-color: black;
+		color: grey;
+	}
+
+	header{
+		background-color: #40E0D0;
+		width: 100%;
+		height: 150px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	main{
+			height: 800px;
+			width: 100%;
+			background-color: beige;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		article{
+			width: 30%;
+			height: 500px;
+			background-color: lightblue;
+			margin: 10px;
+			margin-top: 150px;
+			padding: 10px;
+			text-align: justify;
+			}
+
+			aside{
+			width: 30%;
+			height: 500px;
+			background-color: pink;
+			margin: 10px;
+			margin-top: 150px;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		footer{
+			width: 100%;
+			height: 200px;
+			background-color: limegreen;
+		}
+
+		.chat{
+			width: 100px;
+			height: 70px;
+			background-color: rgb(93,244,120,0.6);
+			font-size: 1.2em;
+			text-align: center;
+			position: fixed; /*debemos tener en cuenta quien es el padre*/
+			bottom: 150px;
+			right: 20px;
+			padding-top: 40px;
+		}
+		.chat:hover{
+			background-color: red;
+			color: white;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<header>
+
+			<h1>Sitio Web</h1>
+
+		<nav>
+			<a href="">Home</a>
+			<a href="">About</a>
+			<a href="">Product</a>
+			<a href="">Contact</a>
+		</nav>
+
+	</header>
+
+	<main>
+		<article>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+
+		<aside>
+			<h3>Aside 1</h3>
+		</aside>
+
+	</main>
+</body>
+
+	<div class="chat">Chat</div>
+
+<footer>
+	Que es un REPOSITORIO??
+	Una carpeta que contendra el codigo fuente de nuestro desarrollo de software (sitio web, desarrollo mobile, etc.)
+
+	Que es una VERSION??
+	Una version es un conjunto de archivo (codigo fuente), sobre los cuales se ha decidido no realizar mas modificaciones.
+
+	El repositorio principal es el REPOSITORIO REMOTO
+
+	Para poder subir repositorios necesito:
+	Registrarme en GitHub
+	Crear un repositorio nuevo haciendo click en 'now' que nos va a dar una ruta, nos copiamos esa ruta
+	Luego descargo Git Bash, que es una consola de comandos
+
+Ingreso a la carpeta donde quiero guardar mi repositorio y abro mi git bash desde ahi
+Desde ahi escribo git clone y pego la ruta que copie previamente. Despues tengo que ingresar a esa carpeta que cree y para eso debo poner cd mas el nombre de mi carpeta que acabamos de crear
+Luego hacemos git add 
+Luego hago git status y me tiene que salir en verde lo que queria agregar
+git commit = trakear
+$ git commit -m "este es mi primer cambio" 
+verifico siempre con $ git status
+Y para terminar de subir mi repositorio = archivo debo usar 
+$ git push -u origin master
+Vuelvo a corroborar con 
+"$ git status" e ingreso en mi nuevo repoisitorio en este caso miambulacia y ahi deberia estar la carpeta que subi
+
+Para poner mi nombre hago lo siguiente:
+$ git config --global user.name "Austry"
+Para agregar mi correo electronico hago:
+$ git config --global user.mail "castilloaustry@gmail.com"
+
+Para ver lo que se hizo escribo
+$ git log, ahi me va a salir todos los commit que se hicieron, quien lo hizo, la fecha, la hora
+</footer>
+
+</html>

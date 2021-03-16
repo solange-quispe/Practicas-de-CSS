@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 "> /*este es el que usa la profe*/
+	/*los links son ARCHIVOS EXTERNOS*/
+	<title></title>
+	<style> /*aca van lo ARCHIVOS INTERNOS*/
+			/*gana el ARCHIVO INTERNO*/
+			/*el " * " es el que menos jerarquia tiene*/
+			/*la palabra "!important" mata la jerarquia, pero no es recomendable usarlo*/
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#header {
+			margin: 0 auto;
+			width: 500px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		ul {
+			list-style: none;
+		}
+		.nav > li {
+			float: left;
+		}
+		.nav li a {
+			background-color: #000;
+			color: #fff;
+			text-decoration: none;
+			padding: 10px 12px;
+			display: block;
+		}
+		.nav li a:hover {
+			background-color: #434343;
+		}
+		.nav li ul {
+			display: none;
+			position: absolute;
+		}
+		.nav li:hover > ul {
+			display: block;
+		}
+		.nav li ul li {
+			position: relative;
+		}
+		.nav li ul li ul { /*SIEMPRE LO TENGO QUE IR VIENDO DE LA DERECHA HACIA LA IZQUIERDA*/
+			right: -90px;
+			top: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<ul class="nav">
+			<li><a href="">INICIO</a></li>
+			<li><a href="">SERVICIOS</a>
+				<ul>
+					<li><a href="">Submenu1</a></li>
+					<li><a href="">Submenu2</a></li>
+					<li><a href="">Submenu3</a></li>
+					<li><a href="">Submenu4</a>
+						<ul>
+							<li><a href="">Submenu1</a></li>
+							<li><a href="">Submenu2</a></li>
+							<li><a href="">Submenu3</a></li>
+							<li><a href="">Submenu4</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="">ACERCA DE</a>
+				<ul>
+					<li><a href="">Submenu1</a></li>
+					<li><a href="">Submenu2</a></li>
+					<li><a href="">Submenu3</a></li>
+					<li><a href="">Submenu4</a></li>
+				</ul>
+			</li>
+			<li><a href="">CONTACTO</a></li>
+		</ul>
+		
+	</div>
+</body> /*NORMALIZE.CSS, es un pequeño fragmento de codigo CSS que no pesa absolutamente nada y que me permite de alguna manera limpiar un poco lo que soin los estilos propios de cada navegador, no es que los borra! pero el trata que nuestra web se vea bien en diferentes navegadores */
+</html>

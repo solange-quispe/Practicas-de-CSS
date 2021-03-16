@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Boton</title>
+	<style>
+		main {
+			width: 700px;
+			height: 300px;
+			border: 2px dashed #9400D3;/*DASHED hace que la linea sea punteada*/
+			margin: auto;
+			position: relative;/*recien ahora me funciono el TOP*/
+			top: 100px;
+		}
+		.alerta button {
+			width: 200px;
+			height: 100px;
+			background-color: #841420;
+			color: #fff;
+			cursor: pointer;/*me sale la "manito"*/
+			position: absolute;/*le ponemos "absoluto" para que dependa del padre. Ademas se va a posicionar por encima*/
+			top: 35%;
+			left: 35%;
+		}
+
+	</style> 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script> /*LIBRERIA*/
+		$(function() {
+			$('.alerta button').click(cerrarAlerta)
+		})
+
+		function cerrarAlerta() {
+			$('.alerta').slideUp()
+		}
+	</script>
+</head>
+<body>
+	<main>
+		<div class="alerta">
+			<button>HELLO!</button>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</main>
+</body>
+</html>
